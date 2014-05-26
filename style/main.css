@@ -118,7 +118,10 @@ hr {
 .container {
   width: 500px;
   margin: 0 auto; }
-
+.scoreContainer{
+  width: 800px;
+  margin: 0 auto;
+}
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
