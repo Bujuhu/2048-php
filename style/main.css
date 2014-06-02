@@ -1,3 +1,5 @@
+/* Forked css */
+
 @import url(fonts/clear-sans.css);
 html, body {
   margin: 0;
@@ -48,7 +50,8 @@ h1.title {
     opacity: 0; } }
 .scores-container {
   float: right;
-  text-align: right; }
+  text-align: right; 
+}
 
 .score-container, .best-container {
   position: relative;
@@ -118,10 +121,6 @@ hr {
 .container {
   width: 500px;
   margin: 0 auto; }
-.scoreContainer{
-  width: 800px;
-  margin: 0 auto;
-}
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
@@ -712,3 +711,52 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+/* Custom CSS */
+
+.scoreContainer{
+  width: 100%;
+  padding: 5px;
+  background-color: #bbada0;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+}
+.scoreTitle{
+  float: none !important;
+}
+.scoreContainer .name{
+  float: left;
+}
+.scoreContainer p{
+  margin-bottom: 0;
+}
+.scoreContainer .date{
+  float: right;
+}
+.scoreRow{
+  clear: both;
+}
+
+/* clearfix */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+  display: block;
+}
+ 
+* html .clearfix {
+  height: 1%;
+}

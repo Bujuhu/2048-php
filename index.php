@@ -25,5 +25,5 @@
       </ul>
     </nav>
   </header>
-  <?php echo getPage($p); ?>
+  <?php getPage($p); ?>
 </body>
