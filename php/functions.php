@@ -14,7 +14,21 @@
 }
 	function printscores($t) {
 		$db = db_connect();
-		$res = $db->query("SELECT * FROM score ORDER BY date DESC");
+		switch ($t) {
+			case '7 Days':
+				$query = "WHERE date > DATE_SUB(NOW(), INTERVAL 1 WEEK)"; 
+				break;
+			case 'this Month':
+				$query = "WHERE (date between DATE_FORMAT(NOW(), '%Y-%m-01') AND NOW())";
+				break;
+			case 'this year':
+				$query = "WHERE (date between DATE_FORMAT(NOW(), '%Y-01-01') AND NOW())";
+				break;
+			default:
+				$query = "";
+				break;
+		}
+		$res = $db->query("SELECT * FROM score $query ORDER BY score DESC");
 		foreach ($res as $r) {
 			echo "<div class='scoreRow'><p class='name'>".$r['username'].": ".$r['score']."</p><p class='date'>".$r['date']."</p></div>";
 		}
@@ -39,8 +53,7 @@
 		$menu[1] = "High-Scores";
 
 		$highScores = array();
-		$highScores[0] = 'today';
-		$highScores[0] = 'this week';
+		$highScores[0] = 'last 7 Days';
 		$highScores[1] = 'this Month';
 		$highScores[2] = 'this year';
 		$highScores[3] = 'all Time';
@@ -52,14 +65,15 @@
 			else {
 				echo "<li>";
 			}
-			echo "<p><a href='index.php?p=$mI'>$mI</a></p></li>";
+			echo "<a href='index.php?p=$mI'>$mI</a>";
 			if($menu[1] == $mI) {
-				echo "<ul>";
+				echo "<ul class='dropdown'>";
 				foreach ($highScores as $sM) {
-					echo "<li><p><a href='index.php?p=$mI&t=$sM'>$sM</a></p></li>";
+					echo "<li><a href='index.php?p=$mI&t=$sM'>$sM</a></li>";
 				}
 				echo "</ul>";
 			}
+			echo "</li>";
 
 		}
 	}
