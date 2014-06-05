@@ -20,7 +20,7 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul class="nav clearfix">
         <?php printMenuItems($p); ?>
       </ul>
     </nav>
