@@ -18,6 +18,7 @@
         <div class="lower">
 	        <a class="keep-playing-button">Keep going</a>
           <a class="retry-button">Try again</a>
+          <a class="submit-button">Submit Score</a>
         </div>
       </div>
 
