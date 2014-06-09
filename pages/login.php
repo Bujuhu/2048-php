@@ -1,23 +1,19 @@
-<form method="post" action="index.php" align="middle" >
-<h1>SIGN IN
-</h1><br>
-Username:
-<input type='text' name='username'><br>
-Password:&nbsp
-<input type='password' name='pass'><br>
-<input type='submit' name='OK' value='OK' style="width:250px"><br>	
-<br>
+<div class="container login">
+	<form method="post" action="index.php">
+	<h1>SIGN IN</h1>
+	<p>	
+		Username:
+		<input type='text' name='name'>
+	</p>
+	<p>
+		Password:
+		<input type='password' name='pass'>
+	</p>
+	<p>	
+		<input type='submit' name='signin' value='Login'>
+		<input type='submit' name='signup' value='Sign up'>
 
-<h2>SIGN UP
-</h2>
-<br>
-Username:
-<input type='text' name='name'><br>
-Password:&nbsp
-<input type='password' name='passnew'><br>
-Password:&nbsp
-<input type='password' name='passnd'><br>
-<input type='submit' name='signup' value='SIGN UP' style="width:250px"><br>
-<br>
-<br>	
-</form>
+	</p>	
+	</form>
+	<p> Forgot your Password? <a href="mailto:juri@schreib.at"> Contact an Administrator!</a></p>
+</div>
