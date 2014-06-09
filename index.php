@@ -26,4 +26,5 @@
     </nav>
   </header>
   <?php getPage($p); ?>
+  <script src="js/notification.js"></script>
 </body>
