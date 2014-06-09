@@ -712,7 +712,7 @@ hr {
   .game-message .lower {
     margin-top: 30px !important; } }
 
-/* Custom CSS */
+/* HighScore Page */
 
 .scoreContainer{
   width: 100%;
@@ -738,6 +738,42 @@ hr {
   clear: both;
 }
 
+/* Login */
+.login{
+  text-align: center;
+}
+/* Notication */
+.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 0s 2s, opacity 2s linear;
+  -moz-transition: visibility 0s 2s, opacity 2s linear;
+  -o-transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.hidden{
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s 2s, opacity 2s linear;
+  -moz-transition: visibility 0s 2s, opacity 2s linear;
+  -o-transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.note{
+  font-weight: bold;
+  color: #fff;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 2;
+  background-color: #bbada0;
+  border-radius: 6px;
+  padding: 10px;
+}
+.note p{
+  margin: 0;
+}
 /* Navigation */
  header {
    margin: 0 auto;
@@ -755,6 +791,7 @@ hr {
   width: 500px;
 }
 .dropdown{
+  z-index: 2;
     background-color: #bbada0;
     list-style: none;
     border-radius: 0 0 6px 6px;
