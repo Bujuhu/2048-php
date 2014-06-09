@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<h1 class="scoreTitle title">High-Scores</h1>
-		<p> of <?php echo $t ?></p>
+		<p> of <?php echo getScoreSubtitle($t); ?></p>
    		 <div class="scoreContainer clearfix">
      		 <?php printScores($t); ?>
 		</div>
